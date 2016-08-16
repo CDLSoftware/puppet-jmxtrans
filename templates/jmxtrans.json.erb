@@ -11,6 +11,9 @@ valid_statsd_settings  = ['bucketType']
 { "servers":
   [ { "host": "<%= jmx_host %>"
     , "port": <%= jmx_port %>
+<% if @jmx_url -%>
+    , "url": "<%= @jmx_url %>"
+<% end -%>
 <% if @jmx_alias -%>
     , "alias": "<%= @jmx_alias %>"
 <% end -%>
