@@ -23,6 +23,7 @@
 #       }
 #   ]
 #
+# $jmx_url              - Custom jmx url.                 Optional.
 # $jmx_alias            - Server alias name.              Optional.
 # $jmx_username         - JMX username (if there is one)  Optional.
 # $jmx_password         - JMX password (if there is one)  Optional.
@@ -38,6 +39,7 @@
 define jmxtrans::metrics(
     $jmx,
     $objects,
+    $jmx_url              = undef,
     $jmx_alias            = undef,
     $jmx_username         = undef,
     $jmx_password         = undef,
